@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class steps{
+	public static void main(String args[]){
+		Scanner lol=new Scanner(System.in);
+		System.out.println("Enter a number :");
+		try{
+			int n=lol.nextInt(),rem=0;count=0;
+			while(n>0){
+				if(n%2==0){
+					n=n/2;
+					count++;
+				}
+				else{
+					n=n-1;
+					count++;
+				}
+			}
+			System.out.println("Total Steps Involved :"+count);
+			
+		}
+		catch(InputMismatchException e){
+			System.out.println("Invalid Input....");
+		}
+	}
+}
