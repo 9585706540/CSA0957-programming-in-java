@@ -1,0 +1,47 @@
+import java.util.*;
+class grade1
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		double to,s1,s2,s3,s4,s5,s6,a;
+		System.out.print("Enter the s1 marks: ");
+		s1=sc.nextDouble();
+		System.out.print("Enter the s2 marks: ");
+		s2=sc.nextDouble();
+		System.out.print("Enter the s3 marks: ");
+		s3=sc.nextDouble();
+		System.out.print("Enter the s4 marks: ");
+		s4=sc.nextDouble();
+		System.out.print("Enter the s5 marks: ");
+		s5=sc.nextDouble();
+		System.out.print("Enter the s6 marks: ");
+		s6=sc.nextDouble();
+	      if(s1<0 || s2<0 || s3<0 || s4<0 || s5<0||s6<0||s1>100 || s2>100 || s3>100 || s4>100||s5>100||s6>100)
+		{
+			System.out.print("Invalid input");	
+			return;
+		}
+		if(s1<40 || s2<40 || s3<40 || s4<40||s5<40||s6<40)
+		{
+			System.out.print("Grade: Fail");	
+			return;
+		}
+		to=s1+s2+s3+s4+s5+s6;
+		a=(to/600)*100;
+		System.out.println("Total= "+to);
+		System.out.println("Aggregate= "+a);
+		if(a>=75)
+		{
+			System.out.println("DISTINCTION");
+		}
+		if(a>=60 && a<75)
+		{
+			System.out.println("First Division");
+		}
+		if(a>=50 && a<60)
+		{
+			System.out.println("Second Division");
+		}
+	}
+}
